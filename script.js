@@ -26,3 +26,10 @@ changeSlide();    })
    changeSlide();
    
        })
+const scrollConstainer = document.querySelectorAll('.products');
+for (const item of scrollConstainer) {
+     item.addEventListener('wheel', (evt)=>{
+      evt.preventDefault();
+        item.scrollleft += evt.deltay;
+     })
+    }
