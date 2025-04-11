@@ -4,12 +4,20 @@ const next_btn = document.querySelectorAll('.control_next');
 
 let n=0;
 
-function changeslid(){
-    for (let i = 0; i < img.length; i++) {
-        imgs[i].display = 'none';
-        
+function changeSlid(){
+    for (let i = 0; i < imgs.length; i++) {
+        imgs[i].style.display = 'none';
     }
-        
+    imgs[n].style.display = 'block';
     
 }
-changeslid();
+changeSlid();
+prev_btn.addevntlistner('click, (e)=>{
+     if(n>0){
+        n--;
+       }else{
+         n =imgs.length- 1;
+       }
+changeSlid();
+
+    })
